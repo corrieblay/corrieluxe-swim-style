@@ -8,35 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Luxury coral reef inspired palette */
+    --background: 30 20% 98%;
+    --foreground: 195 30% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 195 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 195 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Coral primary */
+    --primary: 14 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Turquoise secondary */
+    --secondary: 186 85% 85%;
+    --secondary-foreground: 195 30% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sandy beige muted */
+    --muted: 35 25% 92%;
+    --muted-foreground: 195 15% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Ocean blue accent */
+    --accent: 195 85% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 14 85% 65%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --radius: 1rem;
 
-    --radius: 0.5rem;
+    /* Luxury design tokens */
+    --coral-glow: 14 100% 75%;
+    --ocean-deep: 195 85% 45%;
+    --sunset-start: 14 85% 65%;
+    --sunset-end: 186 85% 70%;
+    --luxury-gold: 45 90% 70%;
+    
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-start)), hsl(var(--sunset-end)));
+    --gradient-ocean: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--ocean-deep)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--luxury-gold)));
+    
+    /* Shadows */
+    --shadow-coral: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-ocean: 0 20px 40px -15px hsl(var(--accent) / 0.4);
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+    
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
