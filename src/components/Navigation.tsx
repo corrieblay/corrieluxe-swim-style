@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingBag, Heart, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,33 +19,42 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#swimwear" className="text-foreground hover:text-primary transition-smooth">
-              Swimwear
-            </a>
-            <a href="#clothing" className="text-foreground hover:text-primary transition-smooth">
-              Clothing
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-smooth">
-              About
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
-              Contact
-            </a>
+            <Link to="/shop" className="text-foreground hover:text-primary transition-smooth">
+              Shop
+            </Link>
+            <Link to="/shop?category=Bikinis" className="text-foreground hover:text-primary transition-smooth">
+              Bikinis
+            </Link>
+            <Link to="/shop?category=Palazzos" className="text-foreground hover:text-primary transition-smooth">
+              Palazzos
+            </Link>
+            <Link to="/shop?category=Dresses" className="text-foreground hover:text-primary transition-smooth">
+              Dresses
+            </Link>
+            <Link to="/shop?category=Jumpsuits" className="text-foreground hover:text-primary transition-smooth">
+              Jumpsuits
+            </Link>
           </div>
 
           {/* Desktop Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Heart className="h-5 w-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <Link to="/account">
+                <Heart className="h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <Link to="/account">
+                <User className="h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-4 w-4 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
-                0
-              </span>
+            <Button variant="ghost" size="icon" className="relative" asChild>
+              <Link to="/cart">
+                <ShoppingBag className="h-5 w-5" />
+                <span className="absolute -top-1 -right-1 h-4 w-4 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
+                  0
+                </span>
+              </Link>
             </Button>
           </div>
 
@@ -64,18 +74,21 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a href="#swimwear" className="text-foreground hover:text-primary transition-smooth py-2">
-                Swimwear
-              </a>
-              <a href="#clothing" className="text-foreground hover:text-primary transition-smooth py-2">
-                Clothing
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-smooth py-2">
-                About
-              </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-smooth py-2">
-                Contact
-              </a>
+              <Link to="/shop" className="text-foreground hover:text-primary transition-smooth py-2">
+                Shop
+              </Link>
+              <Link to="/shop?category=Bikinis" className="text-foreground hover:text-primary transition-smooth py-2">
+                Bikinis
+              </Link>
+              <Link to="/shop?category=Palazzos" className="text-foreground hover:text-primary transition-smooth py-2">
+                Palazzos
+              </Link>
+              <Link to="/shop?category=Dresses" className="text-foreground hover:text-primary transition-smooth py-2">
+                Dresses
+              </Link>
+              <Link to="/shop?category=Jumpsuits" className="text-foreground hover:text-primary transition-smooth py-2">
+                Jumpsuits
+              </Link>
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
                 <Button variant="ghost" size="icon">
                   <Heart className="h-5 w-5" />
